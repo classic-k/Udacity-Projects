@@ -12,4 +12,7 @@
    <ol>
     <li><a href="project 2"> Project 2 </a></li>
   </ol>
+  <ol>
+    <li><a href="project 3"> Project 3 </a></li>
+  </ol>
   </details>
