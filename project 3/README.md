@@ -1,5 +1,6 @@
 # Udacity Cloud NANO Degree | Microservice Project 3 Bootsrap by Udacity
 
+## Menu
 <details>
   <summary> Contents  </summary>
   <ol>
@@ -9,7 +10,7 @@
     <li><a href="#Endpoints"> Microservice URLs </a></li>
   </ol>
   <ol>
-    <li href="#Projects"> Microservices Projects </li>
+    <li href="#Projects"> Microservice Projects </li>
   </ol>
   <ol>
     <li><a href="#Screenshots"> Screenshots </a></li>
@@ -17,7 +18,7 @@
   
   </details>
   
-## Notes
+### Notes
 
 <div>Monotholith to Microservice
 Monolith was deivided into 3 seperate projects:
