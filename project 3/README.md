@@ -72,6 +72,10 @@ If the test passed, it merge the change and create a PR for staging, approve the
 Staging Branch: Action worflow is triggered by push. Workflow create a PR on main, approve the PR and merge.
 Main branch workflow build images and deploy to docker hub using the commit sha as tag for the images.
 
+<h3> Logging </h3>
+Udagram-Feed and Udagram-User APIs use a logger middle ware to log requests
+Autheneticated are assigned request ID by the middleware.
+
 ## Screenshots
 
 <div>
@@ -87,8 +91,8 @@ Main branch workflow build images and deploy to docker hub using the commit sha 
 <h4> Main Branch CI After Push- Build and Deploy to Docker</h4>
  <img src="deployment_screenshots/ebenv2.JPG" width="900" height="400" alt="main-push-CI" />
 
-<h4> Frontend Action Tab (Summary) </h4
-<img src="deployment_screenshots/ebenv2.JPG" width="900" height="400" alt="action-tab" />
+  <h4> Frontend Action Tab (Summary) </h4>
+<img src="deployment_screenshots/ebenv2.JPG" width="900" height="400" alt="frontend-action-tab" />
 
 <center>  <h4> Feed API Repo CI </h4> </center>
 <h4> Dev Branch CI After Push- Create and Merge PR to staging </h4>
@@ -100,8 +104,8 @@ Main branch workflow build images and deploy to docker hub using the commit sha 
 <h4> Main Branch CI After Push- Build and Deploy to Docker</h4>
  <img src="deployment_screenshots/ebenv2.JPG" width="900" height="400" alt="main-push-CI" />
 
-<h4> Frontend Action Tab (Summary) </h4
-<img src="deployment_screenshots/ebenv2.JPG" width="900" height="400" alt="action-tab" />
+  <h4> Feed API Action Tab (Summary) </h4>
+<img src="deployment_screenshots/ebenv2.JPG" width="900" height="400" alt="feed-action-tab" />
 
 <center>  <h4> User API Repo CI </h4> </center>
 <h4> Dev Branch CI After Push- Create and Merge PR to staging </h4>
@@ -113,8 +117,8 @@ Main branch workflow build images and deploy to docker hub using the commit sha 
 <h4> Main Branch CI After Push- Build and Deploy to Docker</h4>
  <img src="deployment_screenshots/ebenv2.JPG" width="900" height="400" alt="main-push-CI" />
 
-<h4> Frontend Action Tab (Summary) </h4
-<img src="deployment_screenshots/ebenv2.JPG" width="900" height="400" alt="action-tab" />
+<h4> User API Action Tab (Summary) </h4>
+<img src="deployment_screenshots/ebenv2.JPG" width="900" height="400" alt="user-action-tab" />
 
 <center>  <h4> Reverseproxy Repo CI </h4> </center>
 <h4> Dev Branch CI After Push- Create and Merge PR to staging </h4>
@@ -126,10 +130,11 @@ Main branch workflow build images and deploy to docker hub using the commit sha 
 <h4> Main Branch CI After Push- Build and Deploy to Docker</h4>
  <img src="deployment_screenshots/ebenv2.JPG" width="900" height="400" alt="main-push-CI" />
 
-<h4> Frontend Action Tab (Summary) </h4
-<img src="deployment_screenshots/ebenv2.JPG" width="900" height="400" alt="action-tab" />
+  <h4> ReverseProxy Action Tab (Summary) </h4>
+<img src="deployment_screenshots/ebenv2.JPG" width="900" height="400" alt="proxy-action-tab" />
 </div>
-<div>
+
+  <div>
 <h3> Screenshot of Docker repos, Kubernente Deployments, Pods and Services</h3>
 
 <center> <h3>Docker Hub Repos Screnshots </h3> </center>
