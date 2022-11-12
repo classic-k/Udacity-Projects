@@ -44,14 +44,20 @@ Github Action was used for CI (Travis Sites did not accept available cards)
 
 ## Projects
 
-<h3><a href="https://github.com/classic-k/Udagram-Frontend"> Udagram Frontent Repo </a></h3>
-Dev Branch: Dev branch action workflow is triggered by push. The workflow perform the test in the udagram_test folder of the project
+<h3 align="center"><a href="https://github.com/classic-k/Udagram-Frontend"> Udagram Frontent Repo </a></h3>
+Dev Branch: Dev branch action workflow is triggered by push. The workflow perform the test in the udagram_test folder of the project.
+The test steps are:
+<ul>
+  <li> Verify dev, staging and main branches exist in the repo </li>
+  <li> Verify working on feature branch or similar</li>
+  <li> Verify cannot push to staging or master (protected branches) </li>
+  </ul>
 If the test passed, it merge the change and create a PR for staging, approve the PR and merge.
 
 Staging Branch: Action worflow is triggered by push. Workflow create a PR on main, approve the PR and merge.
 Main branch workflow build images and deploy to docker hub using the commit sha as tag for the images.
 
-<h3><a href="https://github.com/classic-k/Udagram-Feed"> Udagram Feed-API Repo </a></h3>
+<h3 align="center"><a href="https://github.com/classic-k/Udagram-Feed"> Udagram Feed-API Repo </a></h3>
 Dev Branch: Dev branch action workflow is triggered by push. The workflow perform the test in the udagram_test folder of the project
 If the test passed, it merge the change and create a PR for staging, approve the PR and merge.
 
@@ -65,14 +71,14 @@ If the test passed, it merge the change and create a PR for staging, approve the
 Staging Branch: Action worflow is triggered by push. Workflow create a PR on main, approve the PR and merge.
 Main branch workflow build images and deploy to docker hub using the commit sha as tag for the images.
 
-<h3><a href="https://github.com/classic-k/Udagram-proxy"> Udagram Reverse Proxy Repo </a></h3>
+<h3 align="center"><a href="https://github.com/classic-k/Udagram-proxy"> Udagram Reverse Proxy Repo </a></h3>
 Dev Branch: Dev branch action workflow is triggered by push. The workflow perform the test in the udagram_test folder of the project
 If the test passed, it merge the change and create a PR for staging, approve the PR and merge.
 
 Staging Branch: Action worflow is triggered by push. Workflow create a PR on main, approve the PR and merge.
 Main branch workflow build images and deploy to docker hub using the commit sha as tag for the images.
 
-<h3> Logging </h3>
+<h3 align="center"> Logging </h3>
 Udagram-Feed and Udagram-User APIs use a logger middle ware to log requests
 Autheneticated are assigned request ID by the middleware.
 
