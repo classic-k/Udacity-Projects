@@ -44,7 +44,7 @@ The test steps are:
 <ul>
   <li> Verify dev, staging and main branches exist in the repo </li>
   <li> Verify working on feature branch or similar</li>
-  <li> Verify cannot push to staging or master (protected branches) </li>
+  <li> Verify cannot push to staging or main (protected branches) </li>
   </ul>
 If the test passed, it merge the change and create a PR for staging, approve the PR and merge.
 
