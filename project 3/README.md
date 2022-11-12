@@ -64,7 +64,7 @@ If the test passed, it merge the change and create a PR for staging, approve the
 Staging Branch: Action worflow is triggered by push. Workflow create a PR on main, approve the PR and merge.
 Main branch workflow build images and deploy to docker hub using the commit sha as tag for the images.
 
-<h3><a href="https://github.com/classic-k/Udagram-User"> Udagram User-API Repo </a></h3>
+<h3 align="center"><a href="https://github.com/classic-k/Udagram-User"> Udagram User-API Repo </a></h3>
 Dev Branch: Dev branch action workflow is triggered by push. The workflow perform the test in the udagram_test folder of the project
 If the test passed, it merge the change and create a PR for staging, approve the PR and merge.
 
