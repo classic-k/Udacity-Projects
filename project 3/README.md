@@ -5,14 +5,8 @@
   <summary> Contents  </summary>
   <ol>
     <li><a href="#Notes"> Notes </a></li>
-  </ol>
-  <ol
     <li><a href="#Endpoints"> Microservice URLs </a></li>
- </ol>
- <ol>
     <li href="#Projects"> Microservice Projects </li>
- </ol>
- <ol>
     <li><a href="#Screenshots"> Screenshots </a></li>
   </ol>
   
