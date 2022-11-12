@@ -20,14 +20,20 @@
   
 ### Notes
 
-<div>Monotholith to Microservice
-Monolith was deivided into 3 seperate projects:
-<br><a href="https://github.com/classic-k/Udagram-Frontend"> Udagram Frontent Repo </a><br>
+<div>
+<h3>Monotholith to Microservice</h3>
+Monolith was deivided into 3 seperate projects. Each project with its repo. 
+Repository for each projects contain 3 branches namely dev, staging and main.
+Staging and main branches are protected and cannot be pushed to directly.
+If dev breanch receive a push, action workflow on dev branch create a PR for staging.
+Staging branch action workflow approve and merge the PR. Staging branch action worflow is triggered by a push.
+The workflow create a PR for main branch, approve and merge. Main branch workflow build project image and deploy to docher hub 
 <a href="https://github.com/classic-k/Udagram-API-User"> Udagram API User Repo </a><br>
 <a href="https://github.com/classic-k/Udagram-API-Feed"> Udagram API Feed Repo </a><br>
 With Reverse Proxy To Manage Traffics to the backened
 <br><a href="https://github.com/classic-k/Udagram-proxy"> Udagram Reverse Proxy Repo </a><br>
-Github Action was used for CI </div>
+Github Action was used for CI (Travis Sites did not accept available cards)
+</div>
   
 ## Endpoints
 
@@ -35,7 +41,34 @@ Github Action was used for CI </div>
 <a href="https://github.com/classic-k/Udagram-Frontend"> Udagram Frontent URL </a><br>
 <a href="https://github.com/classic-k/Udagram-API-User"> Udagram Proxy URL </a></li>
   </div>
-  
+## Projects
+<h3><a href="https://github.com/classic-k/Udagram-Frontend"> Udagram Frontent Repo </a></h3>
+Dev Branch: Dev branch action workflow is triggered by push. The workflow perform the test in the udagram_test folder of the project
+If the test passed, it merge the change and create a PR for staging, approve the PR and merge.
+
+Staging Branch: Action worflow is triggered by push. Workflow create a PR on main, approve the PR and merge.
+Main branch workflow build images and deploy to docker hub using the commit sha as tag for the images.
+
+<h3><a href="https://github.com/classic-k/Udagram-Feed"> Udagram Feed-API Repo </a></h3>
+Dev Branch: Dev branch action workflow is triggered by push. The workflow perform the test in the udagram_test folder of the project
+If the test passed, it merge the change and create a PR for staging, approve the PR and merge.
+
+Staging Branch: Action worflow is triggered by push. Workflow create a PR on main, approve the PR and merge.
+Main branch workflow build images and deploy to docker hub using the commit sha as tag for the images.
+
+<h3><a href="https://github.com/classic-k/Udagram-User"> Udagram User-API Repo </a></h3>
+Dev Branch: Dev branch action workflow is triggered by push. The workflow perform the test in the udagram_test folder of the project
+If the test passed, it merge the change and create a PR for staging, approve the PR and merge.
+
+Staging Branch: Action worflow is triggered by push. Workflow create a PR on main, approve the PR and merge.
+Main branch workflow build images and deploy to docker hub using the commit sha as tag for the images.
+
+<h3><a href="https://github.com/classic-k/Udagram-proxy"> Udagram Reverse Proxy Repo </a></h3>
+Dev Branch: Dev branch action workflow is triggered by push. The workflow perform the test in the udagram_test folder of the project
+If the test passed, it merge the change and create a PR for staging, approve the PR and merge.
+
+Staging Branch: Action worflow is triggered by push. Workflow create a PR on main, approve the PR and merge.
+Main branch workflow build images and deploy to docker hub using the commit sha as tag for the images.
 ## Screenshots
 
   <div>
