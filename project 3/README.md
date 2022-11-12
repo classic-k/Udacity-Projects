@@ -1,16 +1,13 @@
 # Udacity Cloud NANO Degree | Microservice Project 3 Bootsrap by Udacity
 
 ## Menu
-<details>
-  <summary> Contents  </summary>
+
   <ol>
     <li><a href="#Notes"> Notes </a></li>
     <li><a href="#Endpoints"> Microservice URLs </a></li>
     <li> <a href="#Projects"> Microservice Projects </a> </li>
     <li><a href="#Screenshots"> Screenshots </a></li>
   </ol>
-  
-  </details>
   
 ### Notes
 
