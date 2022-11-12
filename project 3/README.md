@@ -81,7 +81,7 @@ Autheneticated are assigned request ID by the middleware.
 <div>
 <h3> Screenshot of Github Action CI</h3>
   
-<center>  <h4> Frontend Repo CI </h4> </center>
+<h4 align="center"> Frontend Repo CI </h4>
 <h4> Dev Branch CI After Push- Create and Merge PR to staging </h4>
  <img src="deployment_screenshots/ebenv2.JPG" width="900" height="400" alt="dev-push-CI" />
 
@@ -94,7 +94,7 @@ Autheneticated are assigned request ID by the middleware.
   <h4> Frontend Action Tab (Summary) </h4>
 <img src="deployment_screenshots/ebenv2.JPG" width="900" height="400" alt="frontend-action-tab" />
 
-<center>  <h4> Feed API Repo CI </h4> </center>
+ <h4 align="center"> Feed API Repo CI </h4>
 <h4> Dev Branch CI After Push- Create and Merge PR to staging </h4>
  <img src="deployment_screenshots/ebenv2.JPG" width="900" height="400" alt="dev-push-CI" />
 
@@ -107,7 +107,7 @@ Autheneticated are assigned request ID by the middleware.
   <h4> Feed API Action Tab (Summary) </h4>
 <img src="deployment_screenshots/ebenv2.JPG" width="900" height="400" alt="feed-action-tab" />
 
-<center>  <h4> User API Repo CI </h4> </center>
+<h4 align="center"> User API Repo CI </h4>
 <h4> Dev Branch CI After Push- Create and Merge PR to staging </h4>
  <img src="deployment_screenshots/ebenv2.JPG" width="900" height="400" alt="dev-push-CI" />
 
@@ -120,7 +120,7 @@ Autheneticated are assigned request ID by the middleware.
 <h4> User API Action Tab (Summary) </h4>
 <img src="deployment_screenshots/ebenv2.JPG" width="900" height="400" alt="user-action-tab" />
 
-<center>  <h4> Reverseproxy Repo CI </h4> </center>
+<h4 align="center"> Reverseproxy Repo CI </h4>
 <h4> Dev Branch CI After Push- Create and Merge PR to staging </h4>
  <img src="deployment_screenshots/ebenv2.JPG" width="900" height="400" alt="dev-push-CI" />
 
@@ -137,11 +137,11 @@ Autheneticated are assigned request ID by the middleware.
   <div>
 <h3> Screenshot of Docker repos, Kubernente Deployments, Pods and Services</h3>
 
-<center> <h3>Docker Hub Repos Screnshots </h3> </center>
+<h3 align="center">Docker Hub Repos Screnshots </h3>
 <h4> Docker Images Repos </h4>
 <img src="deployment_screenshots/eben4.JPG" width="900" height="400" alt="docker-repos" />
 
-<center> <h3> Deployments Screnshots </h3> </center>
+<h3 align="center"> Deployments Screnshots </h3>
 <h4> kubectl get deployments </h4>
 <img src="deployment_screenshots/eben4.JPG" width="900" height="400" alt="deployments" />
 
@@ -160,7 +160,7 @@ Autheneticated are assigned request ID by the middleware.
 <h4>Reverse Proxy Deployment: kubectl describe deployments dep-name </h4>
 <img src="deployment_screenshots/eben4.JPG" width="900" height="400" alt="desc-reverseproxy-deploys" />
 
-<center> <h3> Pods Screnshots </h3> </center>
+<h3 align="center"> Pods Screnshots </h3>
 <h4> Kubectl get pods </h4>
 <img src="deployment_screenshots/eben4.JPG" width="900" height="400" alt="pods" />
 
@@ -182,14 +182,14 @@ Autheneticated are assigned request ID by the middleware.
 <h4> Reverse Proxy Pod Log: Kubectl logs pod-name </h4>
 <img src="deployment_screenshots/eben4.JPG" width="900" height="400" alt="reverseproxy-pod-logs" />
 
-<center><h3> HPA Screenshots</h3></center>
+<h3 align="center"> HPA Screenshots</h3>
 <h4> HPA: Kubectl get hpa </h4>
 <img src="deployment_screenshots/eben4.JPG" width="900" height="400" alt="hpa" />
 
 <h4> HPA: Kubectl hpa pod-name(POD with HPA) </h4>
 <img src="deployment_screenshots/eben4.JPG" width="900" height="400" alt="reverseproxy-pod-logs" />
 
-<center> <h3> Services Screnshots </h3> </center>
+<h3 align="center"> Services Screnshots </h3>
 <h4> Kubectl get services </h4>
 <img src="deployment_screenshots/eben4.JPG" width="900" height="400" alt="services" />
 
