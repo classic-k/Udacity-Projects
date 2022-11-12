@@ -41,8 +41,9 @@ Github Action was used for CI (Travis Sites did not accept available cards)
 <a href="https://github.com/classic-k/Udagram-Frontend"> Udagram Frontent URL </a><br>
 <a href="https://github.com/classic-k/Udagram-API-User"> Udagram Proxy URL </a></li>
   </div>
-  
+
 ## Projects
+
 <h3><a href="https://github.com/classic-k/Udagram-Frontend"> Udagram Frontent Repo </a></h3>
 Dev Branch: Dev branch action workflow is triggered by push. The workflow perform the test in the udagram_test folder of the project
 If the test passed, it merge the change and create a PR for staging, approve the PR and merge.
@@ -70,37 +71,132 @@ If the test passed, it merge the change and create a PR for staging, approve the
 
 Staging Branch: Action worflow is triggered by push. Workflow create a PR on main, approve the PR and merge.
 Main branch workflow build images and deploy to docker hub using the commit sha as tag for the images.
+
 ## Screenshots
 
-  <div>
-  <h3> Screenshot of Docker Hub Showing Images</h3>
-  <img src="deployment_screenshots/ebenv2.JPG" width="900" height="400" />
-  </div>
-  <div>
-  <h3> Screenshot of Github Actions After Push to Main </h3>
-  <h4> Udagram-Frontend Github Action Deployment to Docker</h4>
-  <img src="deployment_screenshots/ebenv3.JPG" width="900" height="400" />
-  <h4> Udagram-API-User Github Action Deployment to Docker</h4>
-  <img src="deployment_screenshots/ebenv3.JPG" width="900" height="400" />
-  <h4> Udagram-API-Feed Github Action Deployment to Docker</h4>
-  <img src="deployment_screenshots/ebenv3.JPG" width="900" height="400" />
-  <h4> Udagram-Proxy Github Action Deployment to Docker</h4>
-  <img src="deployment_screenshots/ebenv3.JPG" width="900" height="400" />
-  </div>
-  <div>
-  <h3> Screenshot of Kubernente Showing Deployments</h3>
-  <h4> Kubectl Showing Pods Screenshot </h4>
-  <img src="deployment_screenshots/eben4.JPG" width="900" height="400" />
-  <h4> Kubectl Describe Services Screenshot </h4>
-  <img src="deployment_screenshots/eben4.JPG" width="900" height="400" />
-  <h4> Kubectl Reverse Proxy Screenshot </h4>
-  <img src="deployment_screenshots/eben4.JPG" width="900" height="400" />
-  <h4> Kubectl Showing HPA Screenshot </h4>
-  <img src="deployment_screenshots/eben4.JPG" width="900" height="400" />
-  <h4> Kubectl Showing Logs For API-User Screenshot </h4>
-  <img src="deployment_screenshots/eben4.JPG" width="900" height="400" />
-  <h4> Kubectl Showing Logs For API-Feed Screenshot </h4>
-  <img src="deployment_screenshots/eben4.JPG" width="900" height="400" />
-  </div>
+<div>
+<h3> Screenshot of Github Action CI</h3>
   
-  <div>
+<center>  <h4> Frontend Repo CI </h4> </center>
+<h4> Dev Branch CI After Push- Create and Merge PR to staging </h4>
+ <img src="deployment_screenshots/ebenv2.JPG" width="900" height="400" alt="dev-push-CI" />
+
+<h4> Staging Branch CI After Push- reate and Merge PR to main </h4>
+ <img src="deployment_screenshots/ebenv2.JPG" width="900" height="400" alt="staging-push-CI" />
+
+<h4> Main Branch CI After Push- Build and Deploy to Docker</h4>
+ <img src="deployment_screenshots/ebenv2.JPG" width="900" height="400" alt="main-push-CI" />
+
+<h4> Frontend Action Tab (Summary) </h4
+<img src="deployment_screenshots/ebenv2.JPG" width="900" height="400" alt="action-tab" />
+
+<center>  <h4> Feed API Repo CI </h4> </center>
+<h4> Dev Branch CI After Push- Create and Merge PR to staging </h4>
+ <img src="deployment_screenshots/ebenv2.JPG" width="900" height="400" alt="dev-push-CI" />
+
+<h4> Staging Branch CI After Push- reate and Merge PR to main </h4>
+ <img src="deployment_screenshots/ebenv2.JPG" width="900" height="400" alt="staging-push-CI" />
+
+<h4> Main Branch CI After Push- Build and Deploy to Docker</h4>
+ <img src="deployment_screenshots/ebenv2.JPG" width="900" height="400" alt="main-push-CI" />
+
+<h4> Frontend Action Tab (Summary) </h4
+<img src="deployment_screenshots/ebenv2.JPG" width="900" height="400" alt="action-tab" />
+
+<center>  <h4> User API Repo CI </h4> </center>
+<h4> Dev Branch CI After Push- Create and Merge PR to staging </h4>
+ <img src="deployment_screenshots/ebenv2.JPG" width="900" height="400" alt="dev-push-CI" />
+
+<h4> Staging Branch CI After Push- reate and Merge PR to main </h4>
+ <img src="deployment_screenshots/ebenv2.JPG" width="900" height="400" alt="staging-push-CI" />
+
+<h4> Main Branch CI After Push- Build and Deploy to Docker</h4>
+ <img src="deployment_screenshots/ebenv2.JPG" width="900" height="400" alt="main-push-CI" />
+
+<h4> Frontend Action Tab (Summary) </h4
+<img src="deployment_screenshots/ebenv2.JPG" width="900" height="400" alt="action-tab" />
+
+<center>  <h4> Reverseproxy Repo CI </h4> </center>
+<h4> Dev Branch CI After Push- Create and Merge PR to staging </h4>
+ <img src="deployment_screenshots/ebenv2.JPG" width="900" height="400" alt="dev-push-CI" />
+
+<h4> Staging Branch CI After Push- reate and Merge PR to main </h4>
+ <img src="deployment_screenshots/ebenv2.JPG" width="900" height="400" alt="staging-push-CI" />
+
+<h4> Main Branch CI After Push- Build and Deploy to Docker</h4>
+ <img src="deployment_screenshots/ebenv2.JPG" width="900" height="400" alt="main-push-CI" />
+
+<h4> Frontend Action Tab (Summary) </h4
+<img src="deployment_screenshots/ebenv2.JPG" width="900" height="400" alt="action-tab" />
+</div>
+<div>
+<h3> Screenshot of Docker repos, Kubernente Deployments, Pods and Services</h3>
+
+<center> <h3>Docker Hub Repos Screnshots </h3> </center>
+<h4> Docker Images Repos </h4>
+<img src="deployment_screenshots/eben4.JPG" width="900" height="400" alt="docker-repos" />
+
+<center> <h3> Deployments Screnshots </h3> </center>
+<h4> kubectl get deployments </h4>
+<img src="deployment_screenshots/eben4.JPG" width="900" height="400" alt="deployments" />
+
+<h4> Kubectl describe deployments </h4>
+<img src="deployment_screenshots/eben4.JPG" width="900" height="400" alt="desc-deploys" />
+
+<h4>Frontend Deployment: kubectl describe deployments dep-name </h4>
+<img src="deployment_screenshots/eben4.JPG" width="900" height="400" alt="desc-frontend-deploys" />
+
+<h4>Feed API Deployment: kubectl describe deployments dep-name </h4>
+<img src="deployment_screenshots/eben4.JPG" width="900" height="400" alt="desc-feed-deploys" />
+
+<h4>User API Deployment: kubectl describe deployments dep-name </h4>
+<img src="deployment_screenshots/eben4.JPG" width="900" height="400" alt="desc-user-deploys" />
+
+<h4>Reverse Proxy Deployment: kubectl describe deployments dep-name </h4>
+<img src="deployment_screenshots/eben4.JPG" width="900" height="400" alt="desc-reverseproxy-deploys" />
+
+<center> <h3> Pods Screnshots </h3> </center>
+<h4> Kubectl get pods </h4>
+<img src="deployment_screenshots/eben4.JPG" width="900" height="400" alt="pods" />
+
+<h4> Kubectl describe pods </h4>
+<img src="deployment_screenshots/eben4.JPG" width="900" height="400" alt="desc-pods" />
+
+<h4> Frontend Pod Log: Kubectl logs pod-name </h4>
+<img src="deployment_screenshots/eben4.JPG" width="900" height="400" alt="frontend-pod-logs" />
+
+<h4> Feed API Pod Log: Kubectl logs pod-name </h4>
+<img src="deployment_screenshots/eben4.JPG" width="900" height="400" alt="feed-api-pod-logs" />
+
+<h4> Frontend Pod Log: Kubectl logs pod-name </h4>
+<img src="deployment_screenshots/eben4.JPG" width="900" height="400" alt="frontend-pod-logs" />
+
+<h4> User API Pod Log: Kubectl logs pod-name </h4>
+<img src="deployment_screenshots/eben4.JPG" width="900" height="400" alt="user-api-pod-logs" />
+
+<h4> Reverse Proxy Pod Log: Kubectl logs pod-name </h4>
+<img src="deployment_screenshots/eben4.JPG" width="900" height="400" alt="reverseproxy-pod-logs" />
+
+<center><h3> HPA Screenshots</h3></center>
+<h4> HPA: Kubectl get hpa </h4>
+<img src="deployment_screenshots/eben4.JPG" width="900" height="400" alt="hpa" />
+
+<h4> HPA: Kubectl hpa pod-name(POD with HPA) </h4>
+<img src="deployment_screenshots/eben4.JPG" width="900" height="400" alt="reverseproxy-pod-logs" />
+
+<center> <h3> Services Screnshots </h3> </center>
+<h4> Kubectl get services </h4>
+<img src="deployment_screenshots/eben4.JPG" width="900" height="400" alt="services" />
+
+<h4>Frontend-Service: kubectl describe svc ser-name </h4>
+<img src="deployment_screenshots/eben4.JPG" width="900" height="400" alt="frontend-services" />
+
+<h4>Feed-Service: kubectl describe svc ser-name </h4>
+<img src="deployment_screenshots/eben4.JPG" width="900" height="400" alt="feed-services" />
+
+<h4>User-Service: kubectl describe svc ser-name </h4>
+<img src="deployment_screenshots/eben4.JPG" width="900" height="400" alt="user-services" />
+
+<h4>Proxy-Service: kubectl describe svc ser-name </h4>
+<img src="deployment_screenshots/eben4.JPG" width="900" height="400" alt="proxy-services" />
+</div>
