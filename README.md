@@ -4,7 +4,7 @@
 <h3> Repository for Udacity cloud nano degree project work </h3>
   </div>
 
-<details>
+<details open>
   <summary> Projects  </summary>
   <ol>
     <li><a href="project 1"> Project 1 </a></li>
