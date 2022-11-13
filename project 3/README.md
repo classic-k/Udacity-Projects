@@ -1,5 +1,6 @@
 # Cloud NANO Degree | Monolith to Microservice Project 3
-
+Udagram is cloud application developed using ionic angular for frontend and node js for backend. 
+It allows users to sign up and login , post images to the feed and process photos using image filtering microservice.
 ## Menu
 
 <details open>
