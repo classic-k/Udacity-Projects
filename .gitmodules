@@ -1,0 +1,12 @@
+[submodule "project 3/Udagram-Frontend"]
+	path = project 3/Udagram-Frontend
+	url = https://github.com/classic-k/Udagram-Frontend
+[submodule "project 3/Udagram-Proxy"]
+	path = project 3/Udagram-Proxy
+	url = https://github.com/classic-k/Udagram-Proxy
+[submodule "project 3/Udagram-api-user"]
+	path = project 3/Udagram-api-user
+	url = https://github.com/classic-k/Udagram-api-user
+[submodule "project 3/Udagram-api-feed"]
+	path = project 3/Udagram-api-feed
+	url = https://github.com/classic-k/Udagram-api-feed
