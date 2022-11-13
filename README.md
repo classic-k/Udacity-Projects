@@ -9,6 +9,6 @@
   <ol>
     <li><a href="project 1"> Project 1 </a></li>
     <li><a href="project 2"> Project 2 </a></li>
-    <li><a href="project 3"> Project 3 </a></li>
+    <li><a href="project 3"> Project 3 -Current Submission</a></li>
   </ol>
   </details>
