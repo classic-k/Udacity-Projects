@@ -13,16 +13,15 @@
  </details 
  
 ## Notes
-
+  
 <div>
 <h3>Monotholith to Microservice</h3>
 Monolith was deivided into 3 seperate projects. Each project with its repo.
 Also a repository is created for the reverse proxy to manage traffic to the api endpoints.
-  #### Project Repository
-  [Udagram API User Repository](https://github.com/classic-k/Udagram-API-User)
-  [Udagram API Feed Repository](https://github.com/classic-k/Udagram-API-Feed)
-  [Udagram-Frontend Repository](https://github.com/classic-k/Udagram-Frontnend)
-  [Udagram Reverse Proxy Repository](https://github.com/classic-k/Udagram-Proxy)
+- [Udagram API User Repository](https://github.com/classic-k/Udagram-API-User).
+- [Udagram API Feed Repository](https://github.com/classic-k/Udagram-API-Feed).
+- [Udagram-Frontend Repository](https://github.com/classic-k/Udagram-Frontnend).
+- [Udagram Reverse Proxy Repository](https://github.com/classic-k/Udagram-Proxy).
 
   Each repository contain 3 branches namely dev, staging and main.
 Staging and main branches are protected and cannot be pushed to directly.
