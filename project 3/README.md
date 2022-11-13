@@ -1,4 +1,4 @@
-# Udacity Cloud NANO Degree | Microservice Project 3 Bootsrap by Udacity
+# Cloud NANO Degree | Monolith to Microservice Project 3
 
 ## Menu
 
