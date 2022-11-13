@@ -86,6 +86,31 @@ Main branch workflow build images and deploy to docker hub repository.
 - Udagram-Feed and Udagram-User APIs use a logger middleware to log requests to console
 - Authenticated request are assigned ID by the middleware.
 
+<h3 align="center"> Deployment </h3>
+
+- Create Repository for each project in docker hub
+
+- create VPC on aws for eks cluster
+```bash
+aws cloudformation create-stack --stack-name vpc_name --region us-east-2 --template-body file://yaml_files/vpctempv2.yaml --profile name
+```
+- create eks cluster using subnets from vpc above
+```bash
+aws eks create-cluster --region reg_name --name cluster_name --role-arn arn-for-cluster-role --resources-vpc-config subnetIds=subnetids,securityGroupIds=security_ids --profile name
+```
+- create node group for eks cluster
+```bash
+aws eks create-nodegroup --cluster-name name --nodegroup-name node_name --subnets subnet-087fd67accea15e3b,sourceSecurityGroups=sg-0a516b2d76d7e8364 --scaling-config minSize=3,maxSize=4,desiredSize=4 --ami-type type --node-role arn-for-node-role --disk-size 20 --capacity-type ON_DEMAND --instance-types m5.large --region us-east-1 --profile name
+```
+- Update kubeconfig
+```bash
+aws eks update-kubeconfig --name udagdeveks --region us-east-2 --profile dev
+```
+- Create, configmap, secrets, deployment, service
+```bash
+# k8apply.sh contain script to apply configmap, secrets, deployments, services and hpa
+sudo ./k8apply.sh
+```
 ## Screenshots
 
 <div>
