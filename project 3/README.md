@@ -3,6 +3,7 @@
 ## Menu
 
 <details open>
+  <summary> Contents </summary>
   <ol>
     <li><a href="#Notes"> Notes </a></li>
     <li><a href="#Endpoints"> Microservice URLs </a></li>
@@ -15,10 +16,18 @@
 
 <div>
 <h3>Monotholith to Microservice</h3>
-Monolith was deivided into 3 seperate projects. Each project with its repo. 
-Repository for each projects contain 3 branches namely dev, staging and main.
+Monolith was deivided into 3 seperate projects. Each project with its repo.
+Also a repository is created for the reverse proxy to manage traffic to the api endpoints.
+  #### Project Repository
+  [Udagram API User Repository](https://github.com/classic-k/Udagram-API-User)
+  [Udagram API Feed Repository](https://github.com/classic-k/Udagram-API-Feed)
+  [Udagram-Frontend Repository](https://github.com/classic-k/Udagram-Frontnend)
+  [Udagram Reverse Proxy Repository](https://github.com/classic-k/Udagram-Proxy)
+
+  Each repository contain 3 branches namely dev, staging and main.
 Staging and main branches are protected and cannot be pushed to directly.
-If dev breanch receive a push, action workflow on dev branch create a PR for staging.
+  
+If dev branch receive a push, action workflow on dev branch create a PR for staging, approve the PR and merge.
 Staging branch action workflow approve and merge the PR. Staging branch action worflow is triggered by a push.
 The workflow create a PR for main branch, approve and merge. Main branch workflow build project image and deploy to docher hub 
 <a href="https://github.com/classic-k/Udagram-API-User"> Udagram API User Repo </a><br>
