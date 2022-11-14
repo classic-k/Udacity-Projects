@@ -1,4 +1,4 @@
-# Udacity Cloud Developer Nano Degree
+# Udacity Cloud Developer Nano Degree Project Submissions
 
 <div align="center">
 <h3> Repository for Udacity cloud nano degree project work </h3>
