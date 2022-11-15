@@ -40,10 +40,8 @@ Github Action was used for CI (Travis Sites did not accept available cards)
   
 ## Endpoints
   
-- [Udagram Frontent URL](https://github.com/classic-k/Udagram-Frontend)
-- [Udagram Feed API URL](https://github.com/classic-k/Udagram-Frontend)
-- [Udagram User API URL](https://github.com/classic-k/Udagram-Frontend)
-- [Udagram Proxy URL](https://github.com/classic-k/Udagram-Frontend)
+- [Udagram Frontent URL](http://add02847c3aef4997b08cbdaadaadf29-930012338.us-east-2.elb.amazonaws.com)
+- [Udagram Proxy URL](a353d352a5e4e4305bc850ef122ee91f-821266634.us-east-2.elb.amazonaws.com)
     
 N:B Only Frontend and Proxy Services are expose and can be access via internet
 
