@@ -40,8 +40,8 @@ Github Action was used for CI (Travis Sites did not accept available cards)
   
 ## Endpoints
   
-- [Udagram Frontent URL](http://add02847c3aef4997b08cbdaadaadf29-930012338.us-east-2.elb.amazonaws.com)
-- [Udagram Proxy URL](a353d352a5e4e4305bc850ef122ee91f-821266634.us-east-2.elb.amazonaws.com)
+- [Udagram Frontent URL](http://a5cd453d26c024fdb86efe73a8d8b8a1-842822753.us-east-2.elb.amazonaws.com)
+- [Udagram Proxy URL](http://ab32ab44eb90d4159beb412c969c4028-198379625.us-east-2.elb.amazonaws.com)
     
 N:B Only Frontend and Proxy Services are expose and can be access via internet
 
