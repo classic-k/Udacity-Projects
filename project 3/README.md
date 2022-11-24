@@ -42,6 +42,7 @@ Github Action was used for CI (Travis Sites did not accept available cards)
   
 - [Udagram Frontent URL](http://a5cd453d26c024fdb86efe73a8d8b8a1-842822753.us-east-2.elb.amazonaws.com)
 - [Udagram Proxy URL](http://ab32ab44eb90d4159beb412c969c4028-198379625.us-east-2.elb.amazonaws.com)
+- [Docker Hub URL](http://a5cd453d26c024fdb86efe73a8d8b8a1-842822753.us-east-2.elb.amazonaws.com)
     
 N:B Only Frontend and Proxy Services are expose and can be access via internet
 
@@ -56,7 +57,7 @@ The test steps are:
 - Verify working on feature branch or similar
 - Verify cannot push to staging or main (protected branches) 
  
-If the test passed, it create a PR for staging, approve the PR and merge.
+If the test passed, it create a PR for staging branch, approve the PR and merge.
 
 Staging Branch: Action worflow is triggered by push. Workflow create a PR on main, approve the PR and merge.
   
