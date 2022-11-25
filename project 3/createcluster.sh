@@ -8,7 +8,7 @@ aws configure --profile name
 
 #create VPC for eks cluster
 
-aws cloudformation create-stack --stack-name vpc_name --region us-east-2 --template-body file://yaml_files/vpctempv2.yaml --profile name
+aws cloudformation create-stack --stack-name vpc_name --region us-east-2 --template-body file://yaml_files/create_eks_vpc.yaml --profile name
 
 #create eks cluster
 aws eks create-cluster --region us-east-2 --name cluster_name --role-arn arn:aws:iam::378284883666:role/eksCluster --resources-vpc-config subnetIds=subnetids,subnet_ids,securityGroupIds=security_ids --profile name

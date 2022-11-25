@@ -23,5 +23,7 @@ kubectl apply -f yaml_files/proxy-service.yaml
 kubectl apply -f yaml_files/deployment.yaml
 kubectl apply -f yaml_files/service.yaml
 
+#Install metrics server 
+kubectl apply -f https://github.com/kubernetes-sigs/metrics-server/releases/latest/download/components.yaml
 #HPA 
 kubectl apply -f yaml_files/hpa-deploy.yaml

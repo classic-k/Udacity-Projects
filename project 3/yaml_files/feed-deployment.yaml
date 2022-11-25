@@ -4,8 +4,9 @@ metadata:
   name: udagram-feed-dep
   labels:
     app: udagram-api-feed
+    service: feed-service
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
       app: udagram-api-feed
@@ -13,13 +14,28 @@ spec:
     metadata:
       labels:
         app: udagram-api-feed
+        service: feed-service
     spec:
+      volumes:
+        - name: aws-secret
+          secret:
+            secretName: awssecret
       containers:
       - name: udagram-api-feed
         image: classicmeone/udagram-api-feed
         imagePullPolicy: Always
+        volumeMounts:
+          - mountPath: "/root/.aws/"
+            name: aws-secret
+            readOnly: true
         ports:
         - containerPort: 80
+        resources:
+         
+          requests:
+            cpu: "100m"
+          limits:
+            cpu: "200m"
         env:
           - name: POSTGRES_DB
             valueFrom:
@@ -58,27 +74,27 @@ spec:
                 key: JWT_SECRET
           - name: AWS_MEDIA_BUCKET
             valueFrom:
-              secretKeyRef:
-                name: awssecret
+              configMapKeyRef:
+                name: config
                 key: AWS_MEDIA_BUCKET
-          - name: AWS_ACCESS_KEY_ID
+          - name: URL
             valueFrom:
-              secretKeyRef:
-                name: awssecret
-                key: aws_access_key_id
-          - name: AWS_SECRET_ACCESS_KEY
-            valueFrom:
-              secretKeyRef:
-                name: awssecret
-                key: aws_secret_access_key
-          - name: AWS_DEFAULT_REGION
-            valueFrom:
-              secretKeyRef:
-                name: awssecret
-                key: region
+              configMapKeyRef:
+                name: config
+                key: URL
           - name: AWS_PROFILE
             valueFrom:
-              secretKeyRef:
-                name: awssecret
+              configMapKeyRef:
+                name: config
                 key: profile
-          
+          - name: profile
+            valueFrom:
+              configMapKeyRef:
+                name: config
+                key: profile
+          - name: region
+            valueFrom:
+              configMapKeyRef:
+                name: config
+                key: region
+         

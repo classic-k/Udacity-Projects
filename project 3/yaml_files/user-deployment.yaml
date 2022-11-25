@@ -5,7 +5,7 @@ metadata:
   labels:
     app: udagram-api-user
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
       app: udagram-api-user
@@ -18,6 +18,11 @@ spec:
       - name: udagram-api-user
         image: classicmeone/udagram-api-user
         imagePullPolicy: Always
+        resources:
+          requests:
+            cpu: "100m"
+          limits:
+            cpu: "200m"
         ports:
         - containerPort: 8080
         env:
@@ -41,6 +46,11 @@ spec:
               secretKeyRef:
                 name: dbjwtsecret
                 key: POSTGRES_HOST
+          - name: URL
+            valueFrom:
+              configMapKeyRef:
+                name: config
+                key: URL
           - name: DIALECT
             valueFrom:
               secretKeyRef: 

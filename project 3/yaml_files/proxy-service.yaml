@@ -5,7 +5,7 @@ metadata:
   labels:
     run: reverseproxy
 spec:
-  type: NodePort
+  type: LoadBalancer
   ports:
   - port: 80
     protocol: TCP

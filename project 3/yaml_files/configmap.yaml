@@ -4,3 +4,7 @@ metadata:
   name: config
 data:
   URL: http:127.0.0.1:8080
+  profile: dev
+  region: us-east-1
+  AWS_MEDIA_BUCKET: udagdevs3
+

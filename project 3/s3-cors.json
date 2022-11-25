@@ -1,0 +1,11 @@
+
+{
+  "CORSRules": [
+    {
+      "AllowedOrigins": ["http://a24c3388ca8ff44748db9a1b9690a77f-1129885997.us-east-2.elb.amazonaws.com"],
+      "AllowedHeaders": ["*"],
+      "AllowedMethods": ["PUT", "POST", "DELETE"],
+      "MaxAgeSeconds": "3000"
+    }
+  ]
+}
