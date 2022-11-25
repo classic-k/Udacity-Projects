@@ -119,66 +119,66 @@ sudo ./k8apply.sh
 <h4 align="center"> Frontend Repo CI </h4>
 <h4> Dev Branch CI After Push- Create and Merge PR to staging </h4>
 
- <img src="screenshots/frontend_ci/fr_dev_cre.jpg" width="900" height="400" alt="dev-push-CI" alt="Dev_Branch Create PR" />
-<img src="screenshots/frontend_ci/fr_dev_app.jpg" width="900" height="400" alt="dev-push-CI" alt="Dev_Branch Approve PR" />
+ <img src="screenshots/frontend_ci/fr_dev_cre.JPG" width="900" height="400" alt="dev-push-CI" alt="Dev_Branch Create PR" />
+<img src="screenshots/frontend_ci/fr_dev_app.JPG" width="900" height="400" alt="dev-push-CI" alt="Dev_Branch Approve PR" />
 
 <h4> Staging Branch CI After Push- reate and Merge PR to main </h4>
-  <img src="screenshots/frontend_ci/fr_st_cre.jpg" width="900" height="400" alt="dev-push-CI" alt="Stage_Branch Create PR" />
-<img src="screenshots/frontend_ci/fr_st_app.jpg" width="900" height="400" alt="dev-push-CI" alt="Stage_Branch Approve PR" />
+  <img src="screenshots/frontend_ci/fr_st_cre.JPG" width="900" height="400" alt="dev-push-CI" alt="Stage_Branch Create PR" />
+<img src="screenshots/frontend_ci/fr_st_app.JPG" width="900" height="400" alt="dev-push-CI" alt="Stage_Branch Approve PR" />
 
 <h4> Main Branch CI After Push- Build and Deploy to Docker</h4>
- <img src="screenshots/frontend_ci/fr_main_build.jpg" width="900" height="400" alt="dev-push-CI" alt="Main_Branch Build And Deploy" />
+ <img src="screenshots/frontend_ci/fr_main_build.JPG" width="900" height="400" alt="dev-push-CI" alt="Main_Branch Build And Deploy" />
 
   <h4> Frontend Action Tab (Summary) </h4>
-<img src="screenshots/frontend_ci/ac.jpg" width="900" height="400" alt="dev-push-CI" alt="Action Tab Summary" />
+<img src="screenshots/frontend_ci/ac.JPG" width="900" height="400" alt="dev-push-CI" alt="Action Tab Summary" />
 
  <h4 align="center"> Feed API Repo CI </h4>
  
 <h4> Dev Branch CI After Push- Create and Merge PR to staging </h4>
-<img src="screenshots/feed_ci/dev_cre.jpg" width="900" height="400" alt="dev-push-CI" alt="Dev_Branch Create PR" />
-<img src="screenshots/feed_ci/dev_app.jpg" width="900" height="400" alt="dev-push-CI" alt="Dev_Branch Approve PR" />
+<img src="screenshots/feed_ci/dev_cre.JPG" width="900" height="400" alt="dev-push-CI" alt="Dev_Branch Create PR" />
+<img src="screenshots/feed_ci/dev_app.JPG" width="900" height="400" alt="dev-push-CI" alt="Dev_Branch Approve PR" />
 
 <h4> Staging Branch CI After Push- reate and Merge PR to main </h4>
-<img src="screenshots/feed_ci/st_cre.jpg" width="900" height="400" alt="dev-push-CI" alt="Stage_Branch Create PR" />
-<img src="screenshots/feed_ci/st_app.jpg" width="900" height="400" alt="dev-push-CI" alt="Stage_Branch Approve PR" />
+<img src="screenshots/feed_ci/st_cre.JPG" width="900" height="400" alt="dev-push-CI" alt="Stage_Branch Create PR" />
+<img src="screenshots/feed_ci/st_app.JPG" width="900" height="400" alt="dev-push-CI" alt="Stage_Branch Approve PR" />
 
 <h4> Main Branch CI After Push- Build and Deploy to Docker</h4>
- <img src="screenshots/feed_ci/main_build.jpg" width="900" height="400" alt="dev-push-CI" alt="Main_Branch Build And Deploy" />
+ <img src="screenshots/feed_ci/main_build.JPG" width="900" height="400" alt="dev-push-CI" alt="Main_Branch Build And Deploy" />
 
   <h4> Feed API Action Tab (Summary) </h4>
-<img src="screenshots/feed_ci/ac.jpg" width="900" height="400" alt="dev-push-CI" alt="Action Tab Summary" />
+<img src="screenshots/feed_ci/ac.JPG" width="900" height="400" alt="dev-push-CI" alt="Action Tab Summary" />
 
 <h4 align="center"> User API Repo CI </h4>
 <h4> Dev Branch CI After Push- Create and Merge PR to staging </h4>
- <img src="screenshots/user_ci/dev_cre.jpg" width="900" height="400" alt="dev-push-CI" alt="Dev_Branch Create PR" />
-<img src="screenshots/user_ci/dev_app.jpg" width="900" height="400" alt="dev-push-CI" alt="Dev_Branch Approve PR" />
+ <img src="screenshots/user_ci/dev_cre.JPG" width="900" height="400" alt="dev-push-CI" alt="Dev_Branch Create PR" />
+<img src="screenshots/user_ci/dev_app.JPG" width="900" height="400" alt="dev-push-CI" alt="Dev_Branch Approve PR" />
 
 <h4> Staging Branch CI After Push- reate and Merge PR to main </h4>
-<img src="screenshots/user_ci/st_cre.jpg" width="900" height="400" alt="dev-push-CI" alt="Stage_Branch Create PR" />
-<img src="screenshots/user_ci/st_app.jpg" width="900" height="400" alt="dev-push-CI" alt="Stage_Branch Approve PR" />
+<img src="screenshots/user_ci/st_cre.JPG" width="900" height="400" alt="dev-push-CI" alt="Stage_Branch Create PR" />
+<img src="screenshots/user_ci/st_app.JPG" width="900" height="400" alt="dev-push-CI" alt="Stage_Branch Approve PR" />
 
 <h4> Main Branch CI After Push- Build and Deploy to Docker</h4>
-<img src="screenshots/user_ci/main_build.jpg" width="900" height="400" alt="dev-push-CI" alt="Main_Branch Build And Deploy" />
+<img src="screenshots/user_ci/main_build.JPG" width="900" height="400" alt="dev-push-CI" alt="Main_Branch Build And Deploy" />
 
 <h4> User API Action Tab (Summary) </h4>
-<img src="screenshots/user_ci/ac.jpg" width="900" height="400" alt="dev-push-CI" alt="Action Tab Summary" />
+<img src="screenshots/user_ci/ac.JPG" width="900" height="400" alt="dev-push-CI" alt="Action Tab Summary" />
 
 
 <h4 align="center"> Reverseproxy Repo CI </h4>
 <h4> Dev Branch CI After Push- Create and Merge PR to staging </h4>
- <img src="screenshots/proxy_ci/dev_cre.jpg" width="900" height="400" alt="dev-push-CI" alt="Dev_Branch Create PR" />
-<img src="screenshots/proxy_ci/dev_app.jpg" width="900" height="400" alt="dev-push-CI" alt="Dev_Branch Approve PR" />
+ <img src="screenshots/proxy_ci/dev_cre.JPG" width="900" height="400" alt="dev-push-CI" alt="Dev_Branch Create PR" />
+<img src="screenshots/proxy_ci/dev_app.JPG" width="900" height="400" alt="dev-push-CI" alt="Dev_Branch Approve PR" />
 
 <h4> Staging Branch CI After Push- reate and Merge PR to main </h4>
- <img src="screenshots/proxy_ci/st_cre.jpg" width="900" height="400" alt="dev-push-CI" alt="Stage_Branch Create PR" />
-<img src="screenshots/proxy_ci/st_app.jpg" width="900" height="400" alt="dev-push-CI" alt="Stage_Branch Approve PR" />
+ <img src="screenshots/proxy_ci/st_cre.JPG" width="900" height="400" alt="dev-push-CI" alt="Stage_Branch Create PR" />
+<img src="screenshots/proxy_ci/st_app.JPG" width="900" height="400" alt="dev-push-CI" alt="Stage_Branch Approve PR" />
 
 
 <h4> Main Branch CI After Push- Build and Deploy to Docker</h4>
- <img src="screenshots/proxy_ci/main_build.jpg" width="900" height="400" alt="dev-push-CI" alt="Main_Branch Build And Deploy" />
+ <img src="screenshots/proxy_ci/main_build.JPG" width="900" height="400" alt="dev-push-CI" alt="Main_Branch Build And Deploy" />
 
   <h4> ReverseProxy Action Tab (Summary) </h4>
-<img src="screenshots/proxy_ci/ac.jpg" width="900" height="400" alt="dev-push-CI" alt="Action Tab Summary" />
+<img src="screenshots/proxy_ci/ac.JPG" width="900" height="400" alt="dev-push-CI" alt="Action Tab Summary" />
 </div>
 
   <div>
@@ -186,61 +186,61 @@ sudo ./k8apply.sh
 
 <h3 align="center">Docker Hub Repos Screnshots </h3>
 <h4> Docker Images Repos </h4>
-<img src="screenshots/docker/hub.jpg" width="900" height="400" alt="Docker Hub Repository" />
+<img src="screenshots/docker/hub.JPG" width="900" height="400" alt="Docker Hub Repository" />
 
 <h3 align="center"> Deployments Screnshots </h3>
 <h4> kubectl get deployments </h4>
-<img src="screenshots/dep/get.jpg" width="900" height="400" alt="List Deployments" />
+<img src="screenshots/dep/get.JPG" width="900" height="400" alt="List Deployments" />
 
 <h4>Frontend Deployment: kubectl describe deployments udagram_forntend_dep </h4>
-<img src="screenshots/dep/fr.jpg" width="900" height="400" alt="Describe Frontend Deployments" />
+<img src="screenshots/dep/fr.JPG" width="900" height="400" alt="Describe Frontend Deployments" />
 
 <h4>Reverse Proxy Deployment: kubectl describe deployments proxy-dep </h4>
-<img src="screenshots/dep/pr.jpg" width="900" height="400" alt="Describe Proxy Deployments" />
+<img src="screenshots/dep/pr.JPG" width="900" height="400" alt="Describe Proxy Deployments" />
 
 <h4>User API Deployment: kubectl describe deployments udagram-user-dep </h4>
-<img src="screenshots/dep/us.jpg" width="900" height="400" alt="Describe User Deployments" />
+<img src="screenshots/dep/us.JPG" width="900" height="400" alt="Describe User Deployments" />
 
 <h4>Feed API Deployment: kubectl describe deployments udagram-feed-dep </h4>
-<img src="screenshots/dep/fe.jpg" width="900" height="400" alt="Describe Feed Deployments" />
+<img src="screenshots/dep/fe.JPG" width="900" height="400" alt="Describe Feed Deployments" />
 
 <h3 align="center"> Pods Screnshots </h3>
 <h4> Kubectl get pods </h4>
-<img src="screenshots/pod/get.jpg" width="900" height="400" alt="List PODs" />
+<img src="screenshots/pod/get.JPG" width="900" height="400" alt="List PODs" />
 
 
 <h4> Frontend Pod Log: Kubectl logs pod-name </h4>
-<img src="screenshots/logs/fr.jpg" width="900" height="400" alt="Frontend Pod Log" />
+<img src="screenshots/logs/fr.JPG" width="900" height="400" alt="Frontend Pod Log" />
 
 <h4> Feed API Pod Log: Kubectl logs pod-name </h4>
-<img src="screenshots/logs/fe.jpg" width="900" height="400" alt="Feed Pod Log" />
+<img src="screenshots/logs/fe.JPG" width="900" height="400" alt="Feed Pod Log" />
 
 <h4> User Pod Log: Kubectl logs pod-name </h4>
-<img src="screenshots/logs/us.jpg" width="900" height="400" alt="User Pod Log" />
+<img src="screenshots/logs/us.JPG" width="900" height="400" alt="User Pod Log" />
 
 <h4> Reverse Proxy Pod Log: Kubectl logs pod-name </h4>
-<img src="screenshots/logs/pr.jpg" width="900" height="400" alt="Reverse Proxy Pod Log" />
+<img src="screenshots/logs/pr.JPG" width="900" height="400" alt="Reverse Proxy Pod Log" />
 
 <h3 align="center"> HPA Screenshots</h3>
 <h4> HPA: Kubectl get hpa </h4>
-<img src="screenshots/hpa/get.jpg" width="900" height="400" alt="LIST HPA" />
+<img src="screenshots/hpa/get.JPG" width="900" height="400" alt="LIST HPA" />
 
 <h4> HPA: Kubectl describe hpa </h4>
-<img src="screenshots/hpa/desc.jpg" width="900" height="400" alt="Describe HPA" />
+<img src="screenshots/hpa/desc.JPG" width="900" height="400" alt="Describe HPA" />
 
 <h3 align="center"> Services Screnshots </h3>
 <h4> Kubectl get services </h4>
-<img src="screenshots/svc/get.jpg" width="900" height="400" alt="List Service" />
+<img src="screenshots/svc/get.JPG" width="900" height="400" alt="List Service" />
 
 <h4>Frontend-Service: kubectl describe svc frontend-service </h4>
-<img src="screenshots/svc/fr.jpg" width="900" height="400" alt="Describe Frontend Service" />
+<img src="screenshots/svc/fr.JPG" width="900" height="400" alt="Describe Frontend Service" />
 
 <h4>Feed-Service: kubectl describe svc feed-service </h4>
-<img src="screenshots/svc/fe.jpg" width="900" height="400" alt="Describe Feed Service" />
+<img src="screenshots/svc/fe.JPG" width="900" height="400" alt="Describe Feed Service" />
 
 <h4>User-Service: kubectl describe svc user-service </h4>
-<img src="screenshots/svc/us.jpg" width="900" height="400" alt="Describe User Service" />
+<img src="screenshots/svc/us.JPG" width="900" height="400" alt="Describe User Service" />
 
 <h4>Proxy-Service: kubectl describe svc proxy-service </h4>
-<img src="screenshots/svc/pr.jpg" width="900" height="400" alt="Describe Proxy Service" />
+<img src="screenshots/svc/pr.JPG" width="900" height="400" alt="Describe Proxy Service" />
 </div>
