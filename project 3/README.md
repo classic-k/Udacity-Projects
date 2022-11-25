@@ -119,15 +119,15 @@ sudo ./k8apply.sh
 <h4 align="center"> Frontend Repo CI </h4>
 <h4> Dev Branch CI After Push- Create and Merge PR to staging </h4>
 
- <img src="screenshots/frontend_ci/fr_dev_cre.JPG" width="900" height="400" alt="dev-push-CI" alt="Dev_Branch Create PR" />
-<img src="screenshots/frontend_ci/fr_dev_app.JPG" width="900" height="400" alt="dev-push-CI" alt="Dev_Branch Approve PR" />
+ <img src="screenshots/frontend_ci/dev_cre.JPG" width="900" height="400" alt="dev-push-CI" alt="Dev_Branch Create PR" />
+<img src="screenshots/frontend_ci/dev_app.JPG" width="900" height="400" alt="dev-push-CI" alt="Dev_Branch Approve PR" />
 
 <h4> Staging Branch CI After Push- reate and Merge PR to main </h4>
-  <img src="screenshots/frontend_ci/fr_st_cre.JPG" width="900" height="400" alt="dev-push-CI" alt="Stage_Branch Create PR" />
-<img src="screenshots/frontend_ci/fr_st_app.JPG" width="900" height="400" alt="dev-push-CI" alt="Stage_Branch Approve PR" />
+  <img src="screenshots/frontend_ci/st_cre.JPG" width="900" height="400" alt="dev-push-CI" alt="Stage_Branch Create PR" />
+<img src="screenshots/frontend_ci/st_app.JPG" width="900" height="400" alt="dev-push-CI" alt="Stage_Branch Approve PR" />
 
 <h4> Main Branch CI After Push- Build and Deploy to Docker</h4>
- <img src="screenshots/frontend_ci/fr_main_build.JPG" width="900" height="400" alt="dev-push-CI" alt="Main_Branch Build And Deploy" />
+ <img src="screenshots/frontend_ci/main_build.JPG" width="900" height="400" alt="dev-push-CI" alt="Main_Branch Build And Deploy" />
 
   <h4> Frontend Action Tab (Summary) </h4>
 <img src="screenshots/frontend_ci/ac.JPG" width="900" height="400" alt="dev-push-CI" alt="Action Tab Summary" />
