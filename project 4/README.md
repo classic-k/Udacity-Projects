@@ -1,246 +1,295 @@
 # Udagram-Todo Serverless 
-Udagram is cloud application developed using ionic angular for frontend and node js for backend. 
-It allows users to sign up and login , post images to the feed and process photos using image filtering microservice.
-## Menu
-<h2><a href="https://review.udacity.com/#!/reviews/3834553"> Project Final Review  </a></h2>
-<details open>
-  <summary> Contents </summary>
-  <ol>
-    <li><a href="#Microservice"> Monolith to Microservice </a></li>
-    <li><a href="#Endpoints"> Microservice URLs </a></li>
-    <li> <a href="#Projects"> Microservice Projects </a> </li>
-    <li><a href="#Screenshots"> Screenshots </a></li>
-  </ol>
- </details 
- 
-## Microservice
+# Serverless TODO Repository
+ <a href="https://github.com/classic-k/Udacity-todo/" target="_blank">Server Backend Repo</a>
+ <a href="https://github.com/classic-k/Udacity-todo-client" target="_blank">React Frontend repo</a>
+ <a href="https://github.com/classic-k/Udacity-todo-client" target="_blank">API ENdpoint</a>
 
-Monolith was deivided into 3 seperate projects. Each project with its repo.
-Also a repository is created for the reverse proxy to manage traffic to the api endpoints.
-  
-- [Udagram API User Repository](https://github.com/classic-k/Udagram-API-User).
-- [Udagram API Feed Repository](https://github.com/classic-k/Udagram-API-Feed).
-- [Udagram-Frontend Repository](https://github.com/classic-k/Udagram-Frontnend).
-- [Udagram Reverse Proxy Repository](https://github.com/classic-k/Udagram-Proxy).
+To implement this project, you need to implement a simple TODO application using AWS Lambda and Serverless framework. Search for all comments starting with the `TODO:` in the code to find the placeholders that you need to implement.
 
-Each repository contain 3 branches namely dev, staging and main.
-  
-Staging and main branches are protected and cannot be pushed to directly.
-  
-If dev branch receive a push, action workflow on dev branch do test if defined, create a PR for staging, approve the PR and merge.
-  
-Staging branch action worflow is triggered by a push as a result of PR merge.
-  
-Staging branch  workflow create a PR for main branch, approve and merge.
-  
-Main branch workflow build project image and deploy to docker hub 
-  
-Github Action was used for CI (Travis Sites did not accept available cards)
+# Functionality of the application
 
-  
-## Endpoints
-  
-- [Udagram Frontent URL](http://ab79f09e2098b4b4998548d6fda2b66f-764639449.us-east-2.elb.amazonaws.com)
-- [Udagram Proxy URL](http://a0d3f71b0bb324b5eaae4015bfbae63a-1456592312.us-east-2.elb.amazonaws.com )
+This application will allow creating/removing/updating/fetching TODO items. Each TODO item can optionally have an attachment image. Each user only has access to TODO items that he/she has created.
 
-    
-N:B Only Frontend and Proxy Services are expose and can be access via internet
+# TODO items
 
+The application should store TODO items, and each TODO item contains the following fields:
 
-## Projects
+* `todoId` (string) - a unique id for an item
+* `createdAt` (string) - date and time when an item was created
+* `name` (string) - name of a TODO item (e.g. "Change a light bulb")
+* `dueDate` (string) - date and time by which an item should be completed
+* `done` (boolean) - true if an item was completed, false otherwise
+* `attachmentUrl` (string) (optional) - a URL pointing to an image attached to a TODO item
 
-<h3 align="center"><a href="https://github.com/classic-k/Udagram-Frontend"> Udagram Frontent Repo </a></h3>
-Dev Branch: Dev branch action workflow is triggered by push. The workflow perform the test in the udagram_test folder of the project.
-The test steps are:
-  
-- Verify dev, staging and main branches exist in the repo
-- Verify working on feature branch or similar
-- Verify cannot push to staging or main (protected branches) 
- 
-If the test passed, it create a PR for staging branch, approve the PR and merge.
+You might also store an id of a user who created a TODO item.
 
-Staging Branch: Action worflow is triggered by push. Workflow create a PR on main, approve the PR and merge.
-  
-Main branch workflow build images and deploy to docker hub repository.
+## Prerequisites
 
-<h3 align="center"><a href="https://github.com/classic-k/Udagram-Feed"> Udagram Feed-API Repo </a></h3>
-  
-- Dev Branch: Dev branch action workflow is triggered by push. The workflow create a PR for staging, approve the PR and merge.
-- Staging Branch: Action worflow is triggered by push. The workflow create a PR for main, approve the PR and merge.
-- Main branch workflow build images and deploy to docker hub repository.
+* <a href="https://manage.auth0.com/" target="_blank">Auth0 account</a>
+* <a href="https://github.com" target="_blank">GitHub account</a>
+* <a href="https://nodejs.org/en/download/package-manager/" target="_blank">NodeJS</a> version up to 12.xx 
+* Serverless 
+   * Create a <a href="https://dashboard.serverless.com/" target="_blank">Serverless account</a> user
+   * Install the Serverless Framework’s CLI  (up to VERSION=2.21.1). Refer to the <a href="https://www.serverless.com/framework/docs/getting-started/" target="_blank">official documentation</a> for more help.
+   ```bash
+   npm install -g serverless@2.21.1
+   serverless --version
+   ```
+   * Login and configure serverless to use the AWS credentials 
+   ```bash
+   # Login to your dashboard from the CLI. It will ask to open your browser and finish the process.
+   serverless login
+   # Configure serverless to use the AWS credentials to deploy the application
+   # You need to have a pair of Access key (YOUR_ACCESS_KEY_ID and YOUR_SECRET_KEY) of an IAM user with Admin access permissions
+   sls config credentials --provider aws --key YOUR_ACCESS_KEY_ID --secret YOUR_SECRET_KEY --profile serverless
+   ```
+   
+# Functions to be implemented
 
-<h3 align="center"><a href="https://github.com/classic-k/Udagram-User"> Udagram User-API Repo </a></h3>
+To implement this project, you need to implement the following functions and configure them in the `serverless.yml` file:
 
-- Dev Branch: Dev branch action workflow is triggered by push. The workflow create a PR for staging, approve the PR and merge.
-- Staging Branch: Action worflow is triggered by push. The workflow create a PR for main, approve the PR and merge.
-- Main branch workflow build images and deploy to docker hub repository.
+* `Auth` - this function should implement a custom authorizer for API Gateway that should be added to all other functions.
 
-<h3 align="center"><a href="https://github.com/classic-k/Udagram-proxy"> Udagram Reverse Proxy Repo </a></h3>
-  
-- Dev Branch: Dev branch action workflow is triggered by push. The workflow create a PR for staging, approve the PR and merge.
-- Staging Branch: Action worflow is triggered by push. The workflow create a PR for main, approve the PR and merge.
-- Main branch workflow build images and deploy to docker hub repository.
- 
-<h3 align="center"> Logging </h3>
+* `GetTodos` - should return all TODOs for a current user. A user id can be extracted from a JWT token that is sent by the frontend
 
-- Udagram-Feed and Udagram-User APIs use a logger middleware to log requests to console
-- Authenticated request are assigned ID by the middleware.
+It should return data that looks like this:
 
-<h3 align="center"> Deployment </h3>
-
-- Create Repository for each project in docker hub
-
-- create VPC on aws for eks cluster
-```bash
-aws cloudformation create-stack --stack-name vpc_name --region us-east-2 --template-body file://yaml_files/vpctempv2.yaml --profile name
+```json
+{
+  "items": [
+    {
+      "todoId": "123",
+      "createdAt": "2019-07-27T20:01:45.424Z",
+      "name": "Buy milk",
+      "dueDate": "2019-07-29T20:01:45.424Z",
+      "done": false,
+      "attachmentUrl": "http://example.com/image.png"
+    },
+    {
+      "todoId": "456",
+      "createdAt": "2019-07-27T20:01:45.424Z",
+      "name": "Send a letter",
+      "dueDate": "2019-07-29T20:01:45.424Z",
+      "done": true,
+      "attachmentUrl": "http://example.com/image.png"
+    },
+  ]
+}
 ```
-- create eks cluster using subnets from vpc above
-```bash
-aws eks create-cluster --region reg_name --name cluster_name --role-arn arn-for-cluster-role --resources-vpc-config subnetIds=subnetids,securityGroupIds=security_ids --profile name
+
+* `CreateTodo` - should create a new TODO for a current user. A shape of data send by a client application to this function can be found in the `CreateTodoRequest.ts` file
+
+It receives a new TODO item to be created in JSON format that looks like this:
+
+```json
+{
+  "createdAt": "2019-07-27T20:01:45.424Z",
+  "name": "Buy milk",
+  "dueDate": "2019-07-29T20:01:45.424Z",
+  "done": false,
+  "attachmentUrl": "http://example.com/image.png"
+}
 ```
-- create node group for eks cluster
-```bash
-aws eks create-nodegroup --cluster-name name --nodegroup-name node_name --subnets subnet-087fd67accea15e3b,sourceSecurityGroups=sg-0a516b2d76d7e8364 --scaling-config minSize=3,maxSize=4,desiredSize=4 --ami-type type --node-role arn-for-node-role --disk-size 20 --capacity-type ON_DEMAND --instance-types m5.large --region us-east-1 --profile name
+
+It should return a new TODO item that looks like this:
+
+```json
+{
+  "item": {
+    "todoId": "123",
+    "createdAt": "2019-07-27T20:01:45.424Z",
+    "name": "Buy milk",
+    "dueDate": "2019-07-29T20:01:45.424Z",
+    "done": false,
+    "attachmentUrl": "http://example.com/image.png"
+  }
+}
 ```
-- Update kubeconfig
-```bash
-aws eks update-kubeconfig --name udagdeveks --region us-east-2 --profile dev
+
+* `UpdateTodo` - should update a TODO item created by a current user. A shape of data send by a client application to this function can be found in the `UpdateTodoRequest.ts` file
+
+It receives an object that contains three fields that can be updated in a TODO item:
+
+```json
+{
+  "name": "Buy bread",
+  "dueDate": "2019-07-29T20:01:45.424Z",
+  "done": true
+}
 ```
-- Create, configmap, secrets, deployment, service
-```bash
-# k8apply.sh contain script to apply configmap, secrets, deployments, services and hpa
-sudo ./k8apply.sh
+
+The id of an item that should be updated is passed as a URL parameter.
+
+It should return an empty body.
+
+* `DeleteTodo` - should delete a TODO item created by a current user. Expects an id of a TODO item to remove.
+
+It should return an empty body.
+
+* `GenerateUploadUrl` - returns a pre-signed URL that can be used to upload an attachment file for a TODO item.
+
+It should return a JSON object that looks like this:
+
+```json
+{
+  "uploadUrl": "https://s3-bucket-name.s3.eu-west-2.amazonaws.com/image.png"
+}
 ```
-## Screenshots
 
-<div>
-<h3> Screenshot of Github Action CI</h3>
-  
-<h4 align="center"> Frontend Repo CI </h4>
-<h4> Dev Branch CI After Push- Create and Merge PR to staging </h4>
+All functions are already connected to appropriate events from API Gateway.
 
- <img src="screenshots/frontend_ci/dev_cre.JPG" width="900" height="400" alt="dev-push-CI" alt="Dev_Branch Create PR" />
-<img src="screenshots/frontend_ci/dev_app.JPG" width="900" height="400" alt="dev-push-CI" alt="Dev_Branch Approve PR" />
+An id of a user can be extracted from a JWT token passed by a client.
 
-<h4> Staging Branch CI After Push- reate and Merge PR to main </h4>
-  <img src="screenshots/frontend_ci/st_cre.JPG" width="900" height="400" alt="dev-push-CI" alt="Stage_Branch Create PR" />
-<img src="screenshots/frontend_ci/st_app.JPG" width="900" height="400" alt="dev-push-CI" alt="Stage_Branch Approve PR" />
-
-<h4> Main Branch CI After Push- Build and Deploy to Docker</h4>
- <img src="screenshots/frontend_ci/main_build.JPG" width="900" height="400" alt="dev-push-CI" alt="Main_Branch Build And Deploy" />
-
-  <h4> Frontend Action Tab (Summary) </h4>
-<img src="screenshots/frontend_ci/ac.JPG" width="900" height="400" alt="dev-push-CI" alt="Action Tab Summary" />
-
- <h4 align="center"> Feed API Repo CI </h4>
- 
-<h4> Dev Branch CI After Push- Create and Merge PR to staging </h4>
-<img src="screenshots/feed_ci/dev_cre.JPG" width="900" height="400" alt="dev-push-CI" alt="Dev_Branch Create PR" />
-<img src="screenshots/feed_ci/dev_app.JPG" width="900" height="400" alt="dev-push-CI" alt="Dev_Branch Approve PR" />
-
-<h4> Staging Branch CI After Push- reate and Merge PR to main </h4>
-<img src="screenshots/feed_ci/st_cre.JPG" width="900" height="400" alt="dev-push-CI" alt="Stage_Branch Create PR" />
-<img src="screenshots/feed_ci/st_app.JPG" width="900" height="400" alt="dev-push-CI" alt="Stage_Branch Approve PR" />
-
-<h4> Main Branch CI After Push- Build and Deploy to Docker</h4>
- <img src="screenshots/feed_ci/main_build.JPG" width="900" height="400" alt="dev-push-CI" alt="Main_Branch Build And Deploy" />
-
-  <h4> Feed API Action Tab (Summary) </h4>
-<img src="screenshots/feed_ci/ac.JPG" width="900" height="400" alt="dev-push-CI" alt="Action Tab Summary" />
-
-<h4 align="center"> User API Repo CI </h4>
-<h4> Dev Branch CI After Push- Create and Merge PR to staging </h4>
- <img src="screenshots/user_ci/dev_cre.JPG" width="900" height="400" alt="dev-push-CI" alt="Dev_Branch Create PR" />
-<img src="screenshots/user_ci/dev_app.JPG" width="900" height="400" alt="dev-push-CI" alt="Dev_Branch Approve PR" />
-
-<h4> Staging Branch CI After Push- reate and Merge PR to main </h4>
-<img src="screenshots/user_ci/st_cre.JPG" width="900" height="400" alt="dev-push-CI" alt="Stage_Branch Create PR" />
-<img src="screenshots/user_ci/st_app.JPG" width="900" height="400" alt="dev-push-CI" alt="Stage_Branch Approve PR" />
-
-<h4> Main Branch CI After Push- Build and Deploy to Docker</h4>
-<img src="screenshots/user_ci/main_build.JPG" width="900" height="400" alt="dev-push-CI" alt="Main_Branch Build And Deploy" />
-
-<h4> User API Action Tab (Summary) </h4>
-<img src="screenshots/user_ci/ac.JPG" width="900" height="400" alt="dev-push-CI" alt="Action Tab Summary" />
+You also need to add any necessary resources to the `resources` section of the `serverless.yml` file such as DynamoDB table and S3 bucket.
 
 
-<h4 align="center"> Reverseproxy Repo CI </h4>
-<h4> Dev Branch CI After Push- Create and Merge PR to staging </h4>
- <img src="screenshots/proxy_ci/dev_cre.JPG" width="900" height="400" alt="dev-push-CI" alt="Dev_Branch Create PR" />
-<img src="screenshots/proxy_ci/dev_app.JPG" width="900" height="400" alt="dev-push-CI" alt="Dev_Branch Approve PR" />
+# Frontend
 
-<h4> Staging Branch CI After Push- reate and Merge PR to main </h4>
- <img src="screenshots/proxy_ci/st_cre.JPG" width="900" height="400" alt="dev-push-CI" alt="Stage_Branch Create PR" />
-<img src="screenshots/proxy_ci/st_app.JPG" width="900" height="400" alt="dev-push-CI" alt="Stage_Branch Approve PR" />
+The `client` folder contains a web application that can use the API that should be developed in the project.
 
+This frontend should work with your serverless application once it is developed, you don't need to make any changes to the code. The only file that you need to edit is the `config.ts` file in the `client` folder. This file configures your client application just as it was done in the course and contains an API endpoint and Auth0 configuration:
 
-<h4> Main Branch CI After Push- Build and Deploy to Docker</h4>
- <img src="screenshots/proxy_ci/main_build.JPG" width="900" height="400" alt="dev-push-CI" alt="Main_Branch Build And Deploy" />
+```ts
+const apiId = '...' API Gateway id
+export const apiEndpoint = `https://${apiId}.execute-api.us-east-1.amazonaws.com/dev`
 
-  <h4> ReverseProxy Action Tab (Summary) </h4>
-<img src="screenshots/proxy_ci/ac.JPG" width="900" height="400" alt="dev-push-CI" alt="Action Tab Summary" />
-</div>
+export const authConfig = {
+  domain: '...',    // Domain from Auth0
+  clientId: '...',  // Client id from an Auth0 application
+  callbackUrl: 'http://localhost:3000/callback'
+}
+```
 
-  <div>
-<h3> Screenshot of Docker repos, Kubernente Deployments, Pods and Services</h3>
+## Authentication
 
-<h3 align="center">Docker Hub Repos Screnshots </h3>
-<h4> Docker Images Repos </h4>
-<img src="screenshots/docker/hub.JPG" width="900" height="400" alt="Docker Hub Repository" />
+To implement authentication in your application, you would have to create an Auth0 application and copy "domain" and "client id" to the `config.ts` file in the `client` folder. We recommend using asymmetrically encrypted JWT tokens.
 
-<h3 align="center"> Deployments Screnshots </h3>
-<h4> kubectl get deployments </h4>
-<img src="screenshots/dep/get.JPG" width="900" height="400" alt="List Deployments" />
+# Best practices
 
-<h4>Frontend Deployment: kubectl describe deployments udagram_forntend_dep </h4>
-<img src="screenshots/dep/fr.JPG" width="900" height="400" alt="Describe Frontend Deployments" />
+To complete this exercise, please follow the best practices from the 6th lesson of this course.
 
-<h4>Reverse Proxy Deployment: kubectl describe deployments proxy-dep </h4>
-<img src="screenshots/dep/pr.JPG" width="900" height="400" alt="Describe Proxy Deployments" />
+## Logging
 
-<h4>User API Deployment: kubectl describe deployments udagram-user-dep </h4>
-<img src="screenshots/dep/us.JPG" width="900" height="400" alt="Describe User Deployments" />
+The starter code comes with a configured [Winston](https://github.com/winstonjs/winston) logger that creates [JSON formatted](https://stackify.com/what-is-structured-logging-and-why-developers-need-it/) log statements. You can use it to write log messages like this:
 
-<h4>Feed API Deployment: kubectl describe deployments udagram-feed-dep </h4>
-<img src="screenshots/dep/fe.JPG" width="900" height="400" alt="Describe Feed Deployments" />
+```ts
+import { createLogger } from '../../utils/logger'
+const logger = createLogger('auth')
 
-<h3 align="center"> Pods Screnshots </h3>
-<h4> Kubectl get pods </h4>
-<img src="screenshots/pod/get.JPG" width="900" height="400" alt="List PODs" />
+// You can provide additional information with every log statement
+// This information can then be used to search for log statements in a log storage system
+logger.info('User was authorized', {
+  // Additional information stored with a log statement
+  key: 'value'
+})
+```
 
 
-<h4> Frontend Pod Log: Kubectl logs pod-name </h4>
-<img src="screenshots/logs/fr.JPG" width="900" height="400" alt="Frontend Pod Log" />
+# Grading the submission
 
-<h4> Feed API Pod Log: Kubectl logs pod-name </h4>
-<img src="screenshots/logs/fe.JPG" width="900" height="400" alt="Feed Pod Log" />
+Once you have finished developing your application, please set `apiId` and Auth0 parameters in the `config.ts` file in the `client` folder. A reviewer would start the React development server to run the frontend that should be configured to interact with your serverless application.
 
-<h4> User Pod Log: Kubectl logs pod-name </h4>
-<img src="screenshots/logs/us.JPG" width="900" height="400" alt="User Pod Log" />
+**IMPORTANT**
 
-<h4> Reverse Proxy Pod Log: Kubectl logs pod-name </h4>
-<img src="screenshots/logs/pr.JPG" width="900" height="400" alt="Reverse Proxy Pod Log" />
+*Please leave your application running until a submission is reviewed. If implemented correctly it will cost almost nothing when your application is idle.*
 
-<h3 align="center"> HPA Screenshots</h3>
-<h4> HPA: Kubectl get hpa </h4>
-<img src="screenshots/hpa/get.JPG" width="900" height="400" alt="LIST HPA" />
+# Suggestions
 
-<h4> HPA: Kubectl describe hpa </h4>
-<img src="screenshots/hpa/desc.JPG" width="900" height="400" alt="Describe HPA" />
+To store TODO items, you might want to use a DynamoDB table with local secondary index(es). A create a local secondary index you need to create a DynamoDB resource like this:
 
-<h3 align="center"> Services Screnshots </h3>
-<h4> Kubectl get services </h4>
-<img src="screenshots/svc/get.JPG" width="900" height="400" alt="List Service" />
+```yml
 
-<h4>Frontend-Service: kubectl describe svc frontend-service </h4>
-<img src="screenshots/svc/fr.JPG" width="900" height="400" alt="Describe Frontend Service" />
+TodosTable:
+  Type: AWS::DynamoDB::Table
+  Properties:
+    AttributeDefinitions:
+      - AttributeName: partitionKey
+        AttributeType: S
+      - AttributeName: sortKey
+        AttributeType: S
+      - AttributeName: indexKey
+        AttributeType: S
+    KeySchema:
+      - AttributeName: partitionKey
+        KeyType: HASH
+      - AttributeName: sortKey
+        KeyType: RANGE
+    BillingMode: PAY_PER_REQUEST
+    TableName: ${self:provider.environment.TODOS_TABLE}
+    LocalSecondaryIndexes:
+      - IndexName: ${self:provider.environment.INDEX_NAME}
+        KeySchema:
+          - AttributeName: partitionKey
+            KeyType: HASH
+          - AttributeName: indexKey
+            KeyType: RANGE
+        Projection:
+          ProjectionType: ALL # What attributes will be copied to an index
 
-<h4>Feed-Service: kubectl describe svc feed-service </h4>
-<img src="screenshots/svc/fe.JPG" width="900" height="400" alt="Describe Feed Service" />
+```
 
-<h4>User-Service: kubectl describe svc user-service </h4>
-<img src="screenshots/svc/us.JPG" width="900" height="400" alt="Describe User Service" />
+To query an index you need to use the `query()` method like:
 
-<h4>Proxy-Service: kubectl describe svc proxy-service </h4>
-<img src="screenshots/svc/pr.JPG" width="900" height="400" alt="Describe Proxy Service" />
-</div>
+```ts
+await this.dynamoDBClient
+  .query({
+    TableName: 'table-name',
+    IndexName: 'index-name',
+    KeyConditionExpression: 'paritionKey = :paritionKey',
+    ExpressionAttributeValues: {
+      ':paritionKey': partitionKeyValue
+    }
+  })
+  .promise()
+```
+
+# How to run the application
+
+## Backend
+
+To deploy an application run the following commands:
+
+```
+cd backend
+npm install
+sls deploy -v
+```
+
+## Frontend
+
+To run a client application first edit the `client/src/config.ts` file to set correct parameters. And then run the following commands:
+
+```
+cd client
+npm install
+npm run start
+```
+
+This should start a development server with the React application that will interact with the serverless TODO application.
+
+# Postman collection
+
+An alternative way to test your API, you can use the Postman collection that contains sample requests. You can find a Postman collection in this project. To import this collection, do the following.
+
+Click on the import button:
+
+![Alt text](images/import-collection-1.png?raw=true "Image 1")
+
+
+Click on the "Choose Files":
+
+![Alt text](images/import-collection-2.png?raw=true "Image 2")
+
+
+Select a file to import:
+
+![Alt text](images/import-collection-3.png?raw=true "Image 3")
+
+
+Right click on the imported collection to set variables for the collection:
+
+![Alt text](images/import-collection-4.png?raw=true "Image 4")
+
+Provide variables for the collection (similarly to how this was done in the course):
+
+![Alt text](images/import-collection-5.png?raw=true "Image 5")
