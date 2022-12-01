@@ -1,9 +1,18 @@
 # Udagram-Todo Serverless 
 # Serverless TODO Repository
- <a href="https://github.com/classic-k/Udacity-todo/" target="_blank">Server Backend Repo</a>
- <a href="https://github.com/classic-k/Udacity-todo-client" target="_blank">React Frontend repo</a>
- <a href="https://github.com/classic-k/Udacity-todo-client" target="_blank">API ENdpoint</a>
+ <h3> <a href="https://github.com/classic-k/Udacity-todo/" target="_blank">Server Backend Repo</a> </h3>
+<h3> <a href="https://github.com/classic-k/Udacity-todo-client" target="_blank">React Frontend repo</a> </h3>
 
+# Client App
+
+<h3> 
+ Frontend react app is hosted on aws s3 bucket <br>
+ <a href="http://todoserverlesss3buc.s3-website-us-east-1.amazonaws.com" target="_blank">Front end URL</a> </h3>
+
+# Serverless Backend
+<h3>The backend consist of AWS Lambda Functions created with  <a href="http://todoserverlesss3buc.s3-website-us-east-1.amazonaws.com" target="_blank">Serverless.yaml file</a></h3>
+
+# API Endpoint
 To implement this project, you need to implement a simple TODO application using AWS Lambda and Serverless framework. Search for all comments starting with the `TODO:` in the code to find the placeholders that you need to implement.
 
 # Functionality of the application
