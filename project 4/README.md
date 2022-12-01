@@ -10,7 +10,7 @@
  <a href="http://todoserverlesss3buc.s3-website-us-east-1.amazonaws.com" target="_blank">Front end URL</a> </h3>
 
 # Serverless Backend
-<h3>The backend consist of AWS Lambda Functions created with  <a href="serverless.yaml" target="_blank">Serverless.yaml file</a>
+<h3>The backend consist of AWS Lambda Functions created with  <a href="serverless.yml" target="_blank">Serverless.yaml file</a>
 <br>
 Tracing and Logging enabled to capture metrics
 </h3>
