@@ -10,10 +10,16 @@
  <a href="http://todoserverlesss3buc.s3-website-us-east-1.amazonaws.com" target="_blank">Front end URL</a> </h3>
 
 # Serverless Backend
-<h3>The backend consist of AWS Lambda Functions created with  <a href="http://todoserverlesss3buc.s3-website-us-east-1.amazonaws.com" target="_blank">Serverless.yaml file</a></h3>
+<h3>The backend consist of AWS Lambda Functions created with  <a href="serverless.yaml" target="_blank">Serverless.yaml file</a>
+<br>
+Tracing and Logging enabled to capture metrics
+</h3>
 
 # API Endpoint
-To implement this project, you need to implement a simple TODO application using AWS Lambda and Serverless framework. Search for all comments starting with the `TODO:` in the code to find the placeholders that you need to implement.
+<h3>
+To implement this project, you need to implement a simple TODO application using AWS Lambda and Serverless framework. Search for all comments starting with the `TODO:` in the code to find the placeholders that you need to implement. 
+<a href="https://cd6qpav3ad.execute-api.us-east-1.amazonaws.com/dev"> API Endpoint </a>
+</h3>
 
 # Functionality of the application
 
