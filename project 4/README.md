@@ -1,7 +1,7 @@
 # Udagram-Todo Serverless 
 # Serverless TODO Repository
- <h3> <a href="https://github.com/classic-k/Udacity-todo/" target="_blank">Server Backend Repo</a> </h3>
-<h3> <a href="https://github.com/classic-k/Udacity-todo-client" target="_blank">React Frontend repo</a> </h3>
+ <h3> <a href="https://github.com/classic-k/Udagram-todo" target="_blank">Server Backend Repo</a> </h3>
+<h3> <a href="https://github.com/classic-k/Udagram-todo-client" target="_blank">React Frontend repo</a> </h3>
 
 # Client App
 
