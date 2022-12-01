@@ -10,3 +10,9 @@
 [submodule "project 3/Udagram-api-feed"]
 	path = project 3/Udagram-api-feed
 	url = https://github.com/classic-k/Udagram-api-feed
+[submodule "project 4/Udagram-Todo"]
+	path = project 4/Udagram-Todo
+	url = https://github.com/classic-k/Udagram-Todo.git
+[submodule "project 4/Udagram-Todo-Client"]
+	path = project 4/Udagram-Todo-Client
+	url = https://github.com/classic-k/Udagram-Todo-Client.git
